@@ -1,11 +1,11 @@
-app-url =http://automationpractice.com/index.php
+app-url = http://automationpractice.com/index.php
 sign_in_user = pedro@testmail.com
 sign_in_pass = 12345
-browser = chrome
+browser = edge
 
-# firefox_driver_location = '/Users/diego/Coding/Python/_LIBRARIES/geckodriver'
-# edge_driver_location = '/Users/diego/Coding/Python/_LIBRARIES/msedgedriver'
-#
-# screen_width = 1920
-# screen_height = 1280
-# timeout = 30
+firefox_driver_location = /Users/diego/Coding/Python/_LIBRARIES/geckodriver
+edge_driver_location = /Users/diego/Coding/Python/_LIBRARIES/msedgedriver
+
+window_width = 1920
+window_height = 1080
+timeout = 30
