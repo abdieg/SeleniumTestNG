@@ -11,10 +11,15 @@ public class TestScenarios extends InitialClass {
     Page_Authentication page_auth;
     Page_Account page_account;
 
-    @Parameters({ "browser" })
+//    @Parameters({ "browser" })
+//    @BeforeMethod
+//    public void setup(String browserName) {
+//        setDriver(browserName);
+//    }
+
     @BeforeMethod
-    public void setup(String browserName) {
-        setDriver(browserName);
+    public void setup() {
+        setDriver();
     }
 
     @AfterMethod
@@ -34,16 +39,20 @@ public class TestScenarios extends InitialClass {
         page_index = new Page_Index();
         System.out.println("Verifying log in button");
         Assert.assertTrue(page_index.validateSignInButton());
+        Assert.assertFalse(page_index.validateSignOutButton());
     }
 
     @Test
-    public void test_verify_log_in() {
+    public void test_verify_log_in_and_out() {
         page_index = new Page_Index();
         page_auth = new Page_Authentication();
         page_account = new Page_Account();
         System.out.println("Verifying log in action");
+        Assert.assertTrue(page_index.validateSignInButton());
         page_index.click_SignIn();
         page_auth.log_in();
         Assert.assertTrue(page_account.validateAccountActions());
+        page_index.click_SignOut();
+        Assert.assertTrue(page_index.validateSignInButton());
     }
 }

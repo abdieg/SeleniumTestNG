@@ -33,6 +33,11 @@ public class Page_Index extends InitialClass {
         return action.isDisplayed(topbar_button_signin) && action.isEnabled(topbar_button_signin);
     }
 
+    public boolean validateSignOutButton() {
+        action.waitForElement(topbar_button_signout);
+        return action.isDisplayed(topbar_button_signout) && action.isEnabled(topbar_button_signout);
+    }
+
     public void click_SignOut() {
         action.click(topbar_button_signout);
     }
