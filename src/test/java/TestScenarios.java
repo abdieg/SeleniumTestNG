@@ -3,10 +3,7 @@ import com.pageobjects.Page_Account;
 import com.pageobjects.Page_Authentication;
 import com.pageobjects.Page_Index;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class TestScenarios extends InitialClass {
 
@@ -14,9 +11,10 @@ public class TestScenarios extends InitialClass {
     Page_Authentication page_auth;
     Page_Account page_account;
 
+    @Parameters({ "browser" })
     @BeforeMethod
-    public void setup() {
-        setDriver();
+    public void setup(String browserName) {
+        setDriver(browserName);
     }
 
     @AfterMethod

@@ -11,6 +11,7 @@ import java.util.Properties;
 import java.time.Duration;
 
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 public class InitialClass {
 
@@ -32,8 +33,8 @@ public class InitialClass {
         }
     }
 
-    public static void setDriver() {
-        String browserName = property.getProperty("browser");
+    public static void setDriver(String browserName) {
+//        String browserName = property.getProperty("browser");
 
         if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", property.getProperty("firefox_driver_location"));

@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <parameter name="browser" value="Firefox"/>
-    <test verbose="2" preserve-order="true" name="/Users/diego/Coding/Java/SeleniumTestNG">
-
+<suite name="All Test Suites">
+    <test verbose="2" parallel="methods" name="Firefox tests">
+        <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="TestScenarios"></class>
+            <class name="TestScenarios"/>
+        </classes>
+    </test>
+    <test verbose="2" parallel="methods" name="Edge tests">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="TestScenarios"/>
         </classes>
     </test>
 </suite>
