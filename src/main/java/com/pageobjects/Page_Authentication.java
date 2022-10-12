@@ -20,15 +20,13 @@ public class Page_Authentication extends InitialClass {
     WebElement signin_button;
 
     public Page_Authentication() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
-//    public Page_Account log_in() {
     public void log_in() {
         action.write(signin_email, property.getProperty("sign_in_user"));
         action.write(signin_password, property.getProperty("sign_in_pass"));
         action.click(signin_button);
-//        return new Page_Account();
     }
 
 }

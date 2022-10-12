@@ -32,7 +32,7 @@ public class Page_Account extends InitialClass {
     WebElement account_customer_account;
 
     public Page_Account() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public boolean validateAccountActions() {

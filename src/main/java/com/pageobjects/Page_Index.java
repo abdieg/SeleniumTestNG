@@ -20,7 +20,7 @@ public class Page_Index extends InitialClass {
     WebElement topbar_button_signout;
 
     public Page_Index() {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public boolean validateLogo() {
@@ -30,12 +30,7 @@ public class Page_Index extends InitialClass {
 
     public boolean validateSignInButton() {
         action.waitForElement(topbar_button_signin);
-        if (action.isDisplayed(topbar_button_signin) && action.isEnabled(topbar_button_signin)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return action.isDisplayed(topbar_button_signin) && action.isEnabled(topbar_button_signin);
     }
 
     public void click_SignOut() {
@@ -46,12 +41,3 @@ public class Page_Index extends InitialClass {
         action.click(topbar_button_signin);
     }
 }
-
-
-//span_my_account = "//span[contains(text(),'My account')]"
-//account_order_history = "//ul/li/a/span[contains(text(),'Order history and details')]"
-//account_credit_slips = "//ul/li/a/span[contains(text(),'My credit slips')]"
-//account_addresses = "//ul/li/a/span[contains(text(),'My addresses')]"
-//account_personal_information = "//ul/li/a/span[contains(text(),'My personal information')]"
-//account_wishlists = "//ul/li/a/span[contains(text(),'My wishlists')]"
-//account_customer_account = "//a[@title='View my customer account']"

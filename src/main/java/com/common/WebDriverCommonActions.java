@@ -11,7 +11,7 @@ import java.time.Duration;
 public class WebDriverCommonActions extends InitialClass {
 
     public void waitForElement(WebElement element) {
-        Wait<WebDriver> wait = new FluentWait<>(driver)
+        Wait<WebDriver> wait = new FluentWait<>(getDriver())
                 .withTimeout(Duration.ofSeconds(Long.parseLong(property.getProperty("timeout"))))
                 .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(StaleElementReferenceException.class)

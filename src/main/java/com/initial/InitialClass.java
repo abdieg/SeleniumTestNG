@@ -9,14 +9,19 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.time.Duration;
-import org.testng.annotations.BeforeTest;
+
+import org.testng.annotations.BeforeSuite;
 
 public class InitialClass {
 
     public static Properties property;
-    public static WebDriver driver;
+    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    @BeforeTest
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
+
+    @BeforeSuite
     public void loadProperties() {
         try {
             property = new Properties();
@@ -30,18 +35,18 @@ public class InitialClass {
     public static void setDriver() {
         String browserName = property.getProperty("browser");
 
-        if (browserName.contains("firefox")) {
+        if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", property.getProperty("firefox_driver_location"));
-            driver = new FirefoxDriver();
+            driver.set(new FirefoxDriver());
         }
-        else if (browserName.contains("edge")) {
+        else if (browserName.equalsIgnoreCase("edge")) {
             System.setProperty("webdriver.edge.driver", property.getProperty("edge_driver_location"));
-            driver = new EdgeDriver();
+            driver.set(new EdgeDriver());
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(property.getProperty("timeout"))));
-        driver.get(property.getProperty("app-url"));
-        driver.manage().window().setSize(new Dimension(Integer.parseInt(property.getProperty("window_width")), Integer.parseInt(property.getProperty("window_height"))));
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(property.getProperty("timeout"))));
+        getDriver().get(property.getProperty("app-url"));
+        getDriver().manage().window().setSize(new Dimension(Integer.parseInt(property.getProperty("window_width")), Integer.parseInt(property.getProperty("window_height"))));
     }
 
     public void sleep(int timeout) throws InterruptedException {
