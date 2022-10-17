@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Parallel testing and multiple browsers enabled">
+    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Comment parallel testing and browsers to continue developing test cases">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_ContactUs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestScenarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestScenarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,24 +37,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.22413793",
-    "settings.editor.selected.configurable": "inlay.hints"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.22413793&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestScenarios.test_verify_log_in_and_out">
+  <component name="RunManager" selected="TestNG.TestScenarios.test_verify_customer_service">
     <configuration name="TestNGClass" type="TestNG">
       <module name="SeleniumTestNG" />
       <shortenClasspath name="NONE" />
@@ -74,11 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenarios (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_customer_service" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestScenarios" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="test_verify_customer_service" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -97,11 +99,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenarios.test_verify_login_button" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_negative_search" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestScenarios" />
-      <option name="METHOD_NAME" value="test_verify_login_button" />
+      <option name="METHOD_NAME" value="test_verify_negative_search" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,11 +111,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenarios.test_verify_logo" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_positive_search" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestScenarios" />
-      <option name="METHOD_NAME" value="test_verify_logo" />
+      <option name="METHOD_NAME" value="test_verify_positive_search" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -121,10 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/diego/Coding/Java/SeleniumTestNG/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_search" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestScenarios" />
+      <option name="METHOD_NAME" value="test_verify_search" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -133,19 +137,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.TestNGClass" />
+      <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
+      <item itemvalue="TestNG.TestScenarios.test_verify_negative_search" />
+      <item itemvalue="TestNG.TestScenarios.test_verify_positive_search" />
+      <item itemvalue="TestNG.TestScenarios.test_verify_search" />
       <item itemvalue="TestNG.TestScenarios.test_verify_log_in_and_out" />
-      <item itemvalue="TestNG.TestScenarios.test_verify_login_button" />
-      <item itemvalue="TestNG.TestScenarios.test_verify_logo" />
-      <item itemvalue="TestNG.TestScenarios (1)" />
-      <item itemvalue="TestNG./Users/diego/Coding/Java/SeleniumTestNG/testng.xml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
+        <item itemvalue="TestNG.TestScenarios.test_verify_negative_search" />
+        <item itemvalue="TestNG.TestScenarios.test_verify_positive_search" />
+        <item itemvalue="TestNG.TestScenarios.test_verify_search" />
         <item itemvalue="TestNG.TestScenarios.test_verify_log_in_and_out" />
-        <item itemvalue="TestNG.TestScenarios.test_verify_logo" />
-        <item itemvalue="TestNG./Users/diego/Coding/Java/SeleniumTestNG/testng.xml" />
-        <item itemvalue="TestNG.TestScenarios.test_verify_login_button" />
-        <item itemvalue="TestNG.TestScenarios (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665613495763</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Comment parallel testing and browsers to continue developing test cases">
+      <created>1665614479979</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665614479979</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,6 +217,7 @@
     <MESSAGE value="Completed log in" />
     <MESSAGE value="Change to WebDriverThread to execute tests in Parallel" />
     <MESSAGE value="Parallel testing and multiple browsers enabled" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parallel testing and multiple browsers enabled" />
+    <MESSAGE value="Comment parallel testing and browsers to continue developing test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment parallel testing and browsers to continue developing test cases" />
   </component>
 </project>

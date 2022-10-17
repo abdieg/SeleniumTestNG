@@ -1,7 +1,7 @@
 app-url = http://automationpractice.com/index.php
 sign_in_user = pedro@testmail.com
 sign_in_pass = 12345
-browser = firefox
+browser = edge
 
 firefox_driver_location = /Users/diego/Coding/Python/_LIBRARIES/geckodriver
 edge_driver_location = /Users/diego/Coding/Python/_LIBRARIES/msedgedriver

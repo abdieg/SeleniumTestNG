@@ -1,6 +1,7 @@
 import com.initial.InitialClass;
 import com.pageobjects.Page_Account;
 import com.pageobjects.Page_Authentication;
+import com.pageobjects.Page_ContactUs;
 import com.pageobjects.Page_Index;
 import org.testng.Assert;
 import org.testng.annotations.*;
@@ -10,6 +11,7 @@ public class TestScenarios extends InitialClass {
     Page_Index page_index;
     Page_Authentication page_auth;
     Page_Account page_account;
+    Page_ContactUs page_contact;
 
 //    @Parameters({ "browser" })
 //    @BeforeMethod
@@ -54,5 +56,36 @@ public class TestScenarios extends InitialClass {
         Assert.assertTrue(page_account.validateAccountActions());
         page_index.click_SignOut();
         Assert.assertTrue(page_index.validateSignInButton());
+    }
+
+    @Test
+    public void test_verify_positive_search() {
+        String search_criteria = "Blouse";
+        String search_results = "Blouse";
+        page_index = new Page_Index();
+        System.out.println("Verifying positive search functionality");
+        Assert.assertTrue(page_index.validateSearchExistence());
+        page_index.performSearch(search_criteria);
+        Assert.assertTrue(page_index.lookForSearchresult(search_results));
+    }
+
+    @Test
+    public void test_verify_negative_search() {
+        String search_criteria = "big machine";
+        page_index = new Page_Index();
+        System.out.println("Verifying negative search functionality");
+        Assert.assertTrue(page_index.validateSearchExistence());
+        page_index.performSearch(search_criteria);
+        Assert.assertTrue(page_index.validateNoSearchresults());
+    }
+
+    @Test
+    public void test_verify_customer_service() {
+        page_index = new Page_Index();
+        page_contact = new Page_ContactUs();
+        System.out.println("Verifying customer service form");
+        page_index.click_ContactUs();
+        page_contact.fill_contact_form();
+        Assert.assertTrue(page_contact.validateSuccessContactMessage());
     }
 }
