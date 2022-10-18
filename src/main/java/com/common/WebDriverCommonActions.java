@@ -108,4 +108,8 @@ public class WebDriverCommonActions extends InitialClass {
         return rand.nextInt((max - min) + 1) + min;
     }
 
+    public void acceptAlert() {
+        getDriver().switchTo().alert().accept();
+    }
+
 }

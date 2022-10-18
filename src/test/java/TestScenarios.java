@@ -89,7 +89,7 @@ public class TestScenarios extends InitialClass {
     }
 
     @Test
-    public void test_verify_cart_quantities_colors_sizes() throws InterruptedException {
+    public void test_verify_cart_quantities_colors_sizes() {
         page_index = new Page_Index();
         page_category = new Page_Category();
         page_cartsummary = new Page_CartSummary();
@@ -114,5 +114,38 @@ public class TestScenarios extends InitialClass {
         for (int i = 0; i < new_quantities.length; i++) {
             Assert.assertEquals(new_quantities[i], old_quantities[i]+2);
         }
+    }
+
+    @Test
+    public void test_verify_wishlist() throws InterruptedException {
+        page_index = new Page_Index();
+        page_category = new Page_Category();
+        page_auth = new Page_Authentication();
+        page_account = new Page_Account();
+        String search_criteria1 = "faded short";
+        String search_results1 = "Faded Short Sleeve T-shirts";
+        String search_criteria2 = "printed chiffon dress";
+        String search_results2 = "Printed Chiffon Dress";
+        System.out.println("Verifying wishlist functionality");
+
+        Assert.assertTrue(page_index.validateSearchExistence());
+        Assert.assertTrue(page_index.validateSignInButton());
+        page_index.click_SignIn();
+        page_auth.log_in();
+        Assert.assertTrue(page_account.validateAccountActions());
+
+        page_index.performSearch(search_criteria1);
+        Assert.assertTrue(page_index.lookForSearchresult(search_results1));
+        page_category.add_random_items_in_this_category_to_wishlist();
+
+        page_index.performSearch(search_criteria2);
+        Assert.assertTrue(page_index.lookForSearchresult(search_results2));
+        page_category.add_random_items_in_this_category_to_wishlist();
+
+        page_index.click_CustomerAccount();
+        page_account.click_MyWishlists();
+        page_account.click_OpenWishlistDetails();
+        Assert.assertEquals(2, page_account.getNumberOfProductsInWishlist());
+        page_account.click_WishlistDelete();
     }
 }

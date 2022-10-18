@@ -37,6 +37,15 @@ public class Page_Item extends InitialClass {
     @FindBy(xpath = "//div[@id='layer_cart']//div[contains(@class,'cart')]//a[@title='Proceed to checkout']")
     WebElement cart_popup_button_proceed_to_checkout;
 
+    @FindBy(xpath = "//a[@id='wishlist_button']")
+    WebElement wishlist_button;
+
+    @FindBy(xpath = "//div[@class='fancybox-inner']//p[contains(text(),'Added to your wishlist')]")
+    WebElement fancybox_message;
+
+    @FindBy(xpath = "//div[contains(@class,'fancybox')]//a[@title='Close']")
+    WebElement fancybox_close;
+
     public Page_Item() {
         PageFactory.initElements(getDriver(), this);
     }
@@ -77,5 +86,12 @@ public class Page_Item extends InitialClass {
     public void close_popup_and_continue_shopping() {
         action.waitForElement(cart_popup_successful_message);
         click_ContinueShopping();
+    }
+
+    public void click_WishlistButton() { action.click(wishlist_button); }
+
+    public void close_fancybox() {
+        action.waitForElement(fancybox_message);
+        action.click(fancybox_close);
     }
 }

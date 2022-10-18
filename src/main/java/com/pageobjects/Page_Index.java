@@ -15,6 +15,9 @@ public class Page_Index extends InitialClass {
     @FindBy(xpath = "//img[contains(@class,'logo')]")
     WebElement main_logo;
 
+    @FindBy(xpath = "//a[@title='View my customer account']")
+    WebElement topbar_customer_account;
+
     @FindBy(xpath = "//a[@class='login'][contains(text(),'Sign in')]")
     WebElement topbar_button_signin;
 
@@ -53,6 +56,10 @@ public class Page_Index extends InitialClass {
 
     public Page_Index() {
         PageFactory.initElements(getDriver(), this);
+    }
+
+    public void click_CustomerAccount() {
+        action.click(topbar_customer_account);
     }
 
     public void click_SignOut() {

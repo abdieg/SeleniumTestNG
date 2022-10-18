@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class Page_Account extends InitialClass {
 
     WebDriverCommonActions action = new WebDriverCommonActions();
@@ -31,8 +33,30 @@ public class Page_Account extends InitialClass {
     @FindBy(xpath = "//a[@title='View my customer account']")
     WebElement account_customer_account;
 
+    @FindBy(xpath = "//tr[contains(@id,'wishlist')]//a[contains(text(),'My wishlist')]")
+    WebElement wishlist_open_details;
+
+    @FindBy(xpath = "//div[@class='wishlistLinkTop']//p[@class='product-name']")
+    List<WebElement> wishlist_products;
+
+    @FindBy(xpath = "//tr[contains(@id,'wishlist')]/td[@class='wishlist_delete']/a")
+    WebElement wishlist_delete;
+
     public Page_Account() {
         PageFactory.initElements(getDriver(), this);
+    }
+
+    public void click_MyWishlists() {
+        action.click(account_wishlists);
+    }
+
+    public void click_OpenWishlistDetails() {
+        action.click(wishlist_open_details);
+    }
+
+    public void click_WishlistDelete() {
+        action.click(wishlist_delete);
+        action.acceptAlert();
     }
 
     public boolean validateAccountActions() {
@@ -51,6 +75,12 @@ public class Page_Account extends InitialClass {
                 action.isDisplayed(account_personal_information) &&
                 action.isDisplayed(account_wishlists) &&
                 action.isDisplayed(account_customer_account);
+    }
+
+    public int getNumberOfProductsInWishlist() {
+        action.waitForElement(wishlist_products);
+        System.out.println("Number of products in wishlist: " + wishlist_products.size());
+        return wishlist_products.size();
     }
 
 }
