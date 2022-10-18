@@ -33,9 +33,9 @@ public class InitialClass {
         }
     }
 
-//    public static void setDriver(String browserName) {
-      public static void setDriver() {
-        String browserName = property.getProperty("browser");
+//    public static void setDriver(String browserName) { //Uncomment for TestNG purposes
+      public static void setDriver() { //Uncomment to execute unit tests
+        String browserName = property.getProperty("browser"); //Uncomment to execute unit tests
 
         if (browserName.equalsIgnoreCase("firefox")) {
             System.setProperty("webdriver.gecko.driver", property.getProperty("firefox_driver_location"));

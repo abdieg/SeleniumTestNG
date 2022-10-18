@@ -14,12 +14,12 @@ public class TestScenarios extends InitialClass {
 
 //    @Parameters({ "browser" })
 //    @BeforeMethod
-//    public void setup(String browserName) {
+//    public void setup(String browserName) { //Uncomment this method if TestNG needs to be used
 //        setDriver(browserName);
 //    }
 
     @BeforeMethod
-    public void setup() {
+    public void setup() { //Uncomment this method if single test needs to be executed
         setDriver();
     }
 
@@ -40,7 +40,6 @@ public class TestScenarios extends InitialClass {
         page_index = new Page_Index();
         System.out.println("Verifying log in button");
         Assert.assertTrue(page_index.validateSignInButton());
-        Assert.assertFalse(page_index.validateSignOutButton());
     }
 
     @Test
