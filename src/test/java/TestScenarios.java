@@ -10,6 +10,7 @@ public class TestScenarios extends InitialClass {
     Page_Account page_account;
     Page_ContactUs page_contact;
     Page_Category page_category;
+    Page_CartSummary page_cartsummary;
 
 //    @Parameters({ "browser" })
 //    @BeforeMethod
@@ -91,6 +92,7 @@ public class TestScenarios extends InitialClass {
     public void test_verify_cart_quantities_colors_sizes() throws InterruptedException {
         page_index = new Page_Index();
         page_category = new Page_Category();
+        page_cartsummary = new Page_CartSummary();
         System.out.println("Verifying that we are able to add different quantities, colors and sizes to the cart");
         page_index.click_WomenMenu();
         page_category.add_random_items_in_this_category_to_cart();
@@ -98,6 +100,19 @@ public class TestScenarios extends InitialClass {
         page_category.add_random_items_in_this_category_to_cart();
         page_index.click_TshirtsMenu();
         page_category.add_random_items_in_this_category_to_cart();
-        sleep(5000);
+        page_index.checkoutFloatingCart();
+
+        int totalProducts = page_cartsummary.getNumberOfProducts();
+        Assert.assertEquals(3, totalProducts);
+        Integer[] old_quantities = page_cartsummary.getProductQuantities();
+        for (int i = 0; i < totalProducts; i++) {
+            page_cartsummary.click_QtyAdd(i);
+            page_cartsummary.click_QtyAdd(i);
+        }
+        Integer[] new_quantities = page_cartsummary.getProductQuantities();
+
+        for (int i = 0; i < new_quantities.length; i++) {
+            Assert.assertEquals(new_quantities[i], old_quantities[i]+2);
+        }
     }
 }

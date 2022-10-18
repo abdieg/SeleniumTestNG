@@ -45,6 +45,12 @@ public class Page_Index extends InitialClass {
     @FindBy(xpath = "//p[@class='alert alert-warning'][contains(text(),'No results were found')]")
     WebElement search_alert_no_results;
 
+    @FindBy(xpath = "//div[@class='shopping_cart']/a")
+    WebElement floating_cart;
+
+    @FindBy(xpath = "//div[@class='shopping_cart']//a[@id='button_order_cart']")
+    WebElement floating_checkout_cart_button;
+
     public Page_Index() {
         PageFactory.initElements(getDriver(), this);
     }
@@ -106,6 +112,10 @@ public class Page_Index extends InitialClass {
             }
         }
         return false;
+    }
+
+    public void checkoutFloatingCart() {
+        action.hover_and_click(floating_cart, floating_checkout_cart_button);
     }
 
 }

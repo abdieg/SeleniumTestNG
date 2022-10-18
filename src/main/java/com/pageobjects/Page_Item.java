@@ -53,14 +53,14 @@ public class Page_Item extends InitialClass {
 
     public void setRandomSize() {
         int numberOfOptions = getSelectOptions().getOptions().size();
-        int randomOption = action.getRandomNumber(numberOfOptions);
+        int randomOption = action.getRandomIndex(numberOfOptions);
         getSelectOptions().selectByIndex(randomOption);
     }
 
     public void setRandomColor() {
         System.out.println("Colors available for this product: " + color_field.size());
         System.out.println("Picking a random color");
-        int randomColor = action.getRandomNumber(color_field.size());
+        int randomColor = action.getRandomIndex(color_field.size());
         action.click(color_field.get(randomColor));
     }
 
