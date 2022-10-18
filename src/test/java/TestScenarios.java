@@ -117,7 +117,7 @@ public class TestScenarios extends InitialClass {
     }
 
     @Test
-    public void test_verify_wishlist() throws InterruptedException {
+    public void test_verify_wishlist() {
         page_index = new Page_Index();
         page_category = new Page_Category();
         page_auth = new Page_Authentication();

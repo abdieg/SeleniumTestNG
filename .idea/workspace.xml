@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Completed cart quantities, sizes and colors. Also added validation when quantity box changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Item.java" afterDir="false" />
+    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Finished all main scenarios">
       <change beforePath="$PROJECT_DIR$/src/test/java/TestScenarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestScenarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666126906100</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished all main scenarios">
+      <created>1666133029473</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666133029473</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +245,7 @@
     <MESSAGE value="Completed Contact Us scenarios" />
     <MESSAGE value="Added categories logic" />
     <MESSAGE value="Completed cart quantities, sizes and colors. Also added validation when quantity box changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed cart quantities, sizes and colors. Also added validation when quantity box changes" />
+    <MESSAGE value="Finished all main scenarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished all main scenarios" />
   </component>
 </project>
