@@ -1,8 +1,5 @@
 import com.initial.InitialClass;
-import com.pageobjects.Page_Account;
-import com.pageobjects.Page_Authentication;
-import com.pageobjects.Page_ContactUs;
-import com.pageobjects.Page_Index;
+import com.pageobjects.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -12,6 +9,7 @@ public class TestScenarios extends InitialClass {
     Page_Authentication page_auth;
     Page_Account page_account;
     Page_ContactUs page_contact;
+    Page_Category page_category;
 
 //    @Parameters({ "browser" })
 //    @BeforeMethod
@@ -87,5 +85,19 @@ public class TestScenarios extends InitialClass {
         page_index.click_ContactUs();
         page_contact.fill_contact_form();
         Assert.assertTrue(page_contact.validateSuccessContactMessage());
+    }
+
+    @Test
+    public void test_verify_cart_quantities_colors_sizes() throws InterruptedException {
+        page_index = new Page_Index();
+        page_category = new Page_Category();
+        System.out.println("Verifying that we are able to add different quantities, colors and sizes to the cart");
+        page_index.click_WomenMenu();
+        page_category.add_random_items_in_this_category_to_cart();
+        page_index.click_DressesMenu();
+        page_category.add_random_items_in_this_category_to_cart();
+        page_index.click_TshirtsMenu();
+        page_category.add_random_items_in_this_category_to_cart();
+        sleep(5000);
     }
 }

@@ -24,6 +24,15 @@ public class Page_Index extends InitialClass {
     @FindBy(xpath = "//a[@title='Contact Us']")
     WebElement topbar_contact_us;
 
+    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li/a[@title='Women']")
+    WebElement topmenu_women;
+
+    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li/a[@title='Dresses']")
+    WebElement topmenu_dresses;
+
+    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li/a[@title='T-shirts']")
+    WebElement topmenu_tshirts;
+
     @FindBy(xpath = "//input[@name='search_query']")
     WebElement search_box;
 
@@ -40,6 +49,22 @@ public class Page_Index extends InitialClass {
         PageFactory.initElements(getDriver(), this);
     }
 
+    public void click_SignOut() {
+        action.click(topbar_button_signout);
+    }
+
+    public void click_SignIn() {
+        action.click(topbar_button_signin);
+    }
+
+    public void click_ContactUs() { action.click(topbar_contact_us); }
+
+    public void click_WomenMenu() { action.click(topmenu_women); }
+
+    public void click_DressesMenu() { action.click(topmenu_dresses); }
+
+    public void click_TshirtsMenu() { action.click(topmenu_tshirts); }
+
     public boolean validateLogo() {
         action.waitForElement(main_logo);
         return action.isDisplayed(main_logo);
@@ -55,23 +80,16 @@ public class Page_Index extends InitialClass {
         return action.isDisplayed(topbar_button_signout) && action.isEnabled(topbar_button_signout);
     }
 
-    public void click_SignOut() {
-        action.click(topbar_button_signout);
-    }
-
-    public void click_SignIn() {
-        action.click(topbar_button_signin);
-    }
-
-    public void click_ContactUs() {
-        action.click(topbar_contact_us);
-    }
-
     public boolean validateSearchExistence() {
         action.waitForElement(search_box);
         action.waitForElement(search_button);
         return action.isDisplayed(search_box) && action.isEnabled(search_button);
     }
+
+    public boolean validateNoSearchresults() {
+        return action.isDisplayed(search_alert_no_results);
+    }
+
     public void performSearch(String text) {
         action.write(search_box, text);
         action.click(search_button);
@@ -90,7 +108,4 @@ public class Page_Index extends InitialClass {
         return false;
     }
 
-    public boolean validateNoSearchresults() {
-        return action.isDisplayed(search_alert_no_results);
-    }
 }

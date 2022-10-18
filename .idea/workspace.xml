@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Comment parallel testing and browsers to continue developing test cases">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_ContactUs.java" afterDir="false" />
+    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Completed Contact Us scenarios">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestScenarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestScenarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +55,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestScenarios.test_verify_customer_service">
+  <component name="RunManager" selected="TestNG.TestScenarios.test_verify_cart_quantities_colors_sizes">
     <configuration name="TestNGClass" type="TestNG">
       <module name="SeleniumTestNG" />
       <shortenClasspath name="NONE" />
@@ -75,11 +76,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenarios.test_verify_customer_service" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_cart_quantities_colors_sizes" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestScenarios" />
-      <option name="METHOD_NAME" value="test_verify_customer_service" />
+      <option name="METHOD_NAME" value="test_verify_cart_quantities_colors_sizes" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -87,11 +88,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenarios.test_verify_log_in_and_out" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_customer_service" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestScenarios" />
-      <option name="METHOD_NAME" value="test_verify_log_in_and_out" />
+      <option name="METHOD_NAME" value="test_verify_customer_service" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -137,19 +138,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.TestNGClass" />
+      <item itemvalue="TestNG.TestScenarios.test_verify_cart_quantities_colors_sizes" />
       <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
       <item itemvalue="TestNG.TestScenarios.test_verify_negative_search" />
       <item itemvalue="TestNG.TestScenarios.test_verify_positive_search" />
       <item itemvalue="TestNG.TestScenarios.test_verify_search" />
-      <item itemvalue="TestNG.TestScenarios.test_verify_log_in_and_out" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestScenarios.test_verify_cart_quantities_colors_sizes" />
         <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
         <item itemvalue="TestNG.TestScenarios.test_verify_negative_search" />
         <item itemvalue="TestNG.TestScenarios.test_verify_positive_search" />
         <item itemvalue="TestNG.TestScenarios.test_verify_search" />
-        <item itemvalue="TestNG.TestScenarios.test_verify_log_in_and_out" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665614479979</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Completed Contact Us scenarios">
+      <created>1666042134098</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666042134098</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +226,7 @@
     <MESSAGE value="Change to WebDriverThread to execute tests in Parallel" />
     <MESSAGE value="Parallel testing and multiple browsers enabled" />
     <MESSAGE value="Comment parallel testing and browsers to continue developing test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment parallel testing and browsers to continue developing test cases" />
+    <MESSAGE value="Completed Contact Us scenarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Contact Us scenarios" />
   </component>
 </project>

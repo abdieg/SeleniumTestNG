@@ -2,11 +2,13 @@ package com.common;
 
 import com.initial.InitialClass;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class WebDriverCommonActions extends InitialClass {
 
@@ -42,4 +44,22 @@ public class WebDriverCommonActions extends InitialClass {
         waitForElement(element);
         return element.isEnabled();
     }
+
+    public void hover(WebElement element) {
+        Actions actions = new Actions(getDriver());
+        actions.moveToElement(element).perform();
+//        actions.moveToElement(element);
+//        actions.click().build().perform();
+    }
+
+    public void goBack() {
+        getDriver().navigate().back();
+    }
+
+    public Integer getRandomNumber(int max) {
+        Random rand = new Random();
+        int n = rand.nextInt(max);
+        return n;
+    }
+
 }
