@@ -38,6 +38,16 @@ public class WebDriverCommonActions extends InitialClass {
         wait.until(ExpectedConditions.elementToBeClickable(element.get(0)));
     }
 
+    public void waitForElementToHide(WebElement element) {
+        Wait<WebDriver> wait = new FluentWait<>(getDriver())
+                .withTimeout(Duration.ofSeconds(Long.parseLong(property.getProperty("timeout"))))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(NoSuchElementException.class);
+
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public void waitToBeGreater(WebElement element, String attr) {
         String original_value = element.getAttribute(attr);
 

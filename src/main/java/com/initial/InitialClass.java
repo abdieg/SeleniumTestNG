@@ -46,9 +46,12 @@ public class InitialClass {
             driver.set(new EdgeDriver());
         }
 
+        getDriver().manage().deleteAllCookies();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(property.getProperty("timeout"))));
         getDriver().get(property.getProperty("app-url"));
-        getDriver().manage().window().setSize(new Dimension(Integer.parseInt(property.getProperty("window_width")), Integer.parseInt(property.getProperty("window_height"))));
+        getDriver().manage().window().maximize();
+//        getDriver().manage().window().setSize(new Dimension(Integer.parseInt(property.getProperty("window_width")), Integer.parseInt(property.getProperty("window_height"))));
+
     }
 
     public void sleep(int timeout) throws InterruptedException {

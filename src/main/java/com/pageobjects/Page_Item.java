@@ -86,6 +86,7 @@ public class Page_Item extends InitialClass {
     public void close_popup_and_continue_shopping() {
         action.waitForElement(cart_popup_successful_message);
         click_ContinueShopping();
+        action.waitForElementToHide(cart_popup_successful_message);
     }
 
     public void click_WishlistButton() { action.click(wishlist_button); }
@@ -93,5 +94,6 @@ public class Page_Item extends InitialClass {
     public void close_fancybox() {
         action.waitForElement(fancybox_message);
         action.click(fancybox_close);
+        action.waitForElementToHide(fancybox_message);
     }
 }

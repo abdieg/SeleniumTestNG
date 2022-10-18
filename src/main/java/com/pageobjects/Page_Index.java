@@ -104,6 +104,7 @@ public class Page_Index extends InitialClass {
     }
 
     public void performSearch(String text) {
+        action.waitForElement(search_box);
         action.write(search_box, text);
         action.click(search_button);
     }
