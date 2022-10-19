@@ -96,6 +96,9 @@ public class WebDriverCommonActions extends InitialClass {
     public void hover(WebElement element) {
         Actions actions = new Actions(getDriver());
         waitForElement(element);
+        if (property.getProperty("browser").equalsIgnoreCase("firefox")) {
+            scrollToElement(element);
+        }
         actions.moveToElement(element).perform();
     }
 
@@ -121,6 +124,10 @@ public class WebDriverCommonActions extends InitialClass {
 
     public void acceptAlert() {
         getDriver().switchTo().alert().accept();
+    }
+
+    public void scrollToElement(WebElement element) {
+        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView();", element);
     }
 
 }

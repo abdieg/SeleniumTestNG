@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Adding Firefox fixes">
+    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Adding Chrome support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestScenarios.test_verify_cart_quantities_colors_sizes" />
-        <item itemvalue="TestNG.TestScenarios.test_verify_logo" />
         <item itemvalue="TestNG.TestScenarios.test_verify_wishlist" />
+        <item itemvalue="TestNG.TestScenarios.test_verify_logo" />
         <item itemvalue="TestNG./Users/diego/Coding/Java/SeleniumTestNG/testng.xml" />
         <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
       </list>
@@ -244,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666137170813</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding Chrome support">
+      <created>1666217899382</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1666217899382</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +277,7 @@
     <MESSAGE value="Removed trash code" />
     <MESSAGE value="Adding comments to use TestNG later" />
     <MESSAGE value="Adding Firefox fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Firefox fixes" />
+    <MESSAGE value="Adding Chrome support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Chrome support" />
   </component>
 </project>
