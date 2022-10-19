@@ -95,6 +95,7 @@ public class WebDriverCommonActions extends InitialClass {
 
     public void hover(WebElement element) {
         Actions actions = new Actions(getDriver());
+        waitForElement(element);
         actions.moveToElement(element).perform();
     }
 

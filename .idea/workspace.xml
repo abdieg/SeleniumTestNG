@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Adding comments to use TestNG later">
+    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Adding Firefox fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/common/WebDriverCommonActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pageobjects/Page_Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
@@ -101,11 +99,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScenarios.test_verify_negative_search" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestScenarios.test_verify_logo" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumTestNG" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestScenarios" />
-      <option name="METHOD_NAME" value="test_verify_negative_search" />
+      <option name="METHOD_NAME" value="test_verify_logo" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -137,19 +135,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.TestNGClass" />
+      <item itemvalue="TestNG.TestScenarios.test_verify_logo" />
       <item itemvalue="TestNG.TestScenarios.test_verify_cart_quantities_colors_sizes" />
       <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
-      <item itemvalue="TestNG.TestScenarios.test_verify_negative_search" />
       <item itemvalue="TestNG.TestScenarios.test_verify_wishlist" />
       <item itemvalue="TestNG./Users/diego/Coding/Java/SeleniumTestNG/testng.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.TestScenarios.test_verify_cart_quantities_colors_sizes" />
+        <item itemvalue="TestNG.TestScenarios.test_verify_logo" />
         <item itemvalue="TestNG.TestScenarios.test_verify_wishlist" />
         <item itemvalue="TestNG./Users/diego/Coding/Java/SeleniumTestNG/testng.xml" />
         <item itemvalue="TestNG.TestScenarios.test_verify_customer_service" />
-        <item itemvalue="TestNG.TestScenarios.test_verify_negative_search" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666134390828</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adding Firefox fixes">
+      <created>1666137170813</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1666137170813</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +271,7 @@
     <MESSAGE value="Finished all main scenarios" />
     <MESSAGE value="Removed trash code" />
     <MESSAGE value="Adding comments to use TestNG later" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding comments to use TestNG later" />
+    <MESSAGE value="Adding Firefox fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Firefox fixes" />
   </component>
 </project>

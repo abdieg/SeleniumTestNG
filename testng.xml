@@ -13,4 +13,10 @@
             <class name="TestScenarios"/>
         </classes>
     </test>
+    <test verbose="2" name="Chrome tests">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="TestScenarios"/>
+        </classes>
+    </test>
 </suite>
