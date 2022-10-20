@@ -88,6 +88,8 @@ public class WebDriverCommonActions extends InitialClass {
         return element.isDisplayed();
     }
 
+    public boolean isPresent(List<WebElement> element) { return element != null && element.size() > 0; }
+
     public boolean isEnabled(WebElement element) {
         waitForElement(element);
         return element.isEnabled();

@@ -132,6 +132,9 @@ public class TestScenarios extends InitialClass {
         page_index.click_SignIn();
         page_auth.log_in();
         Assert.assertTrue(page_account.validateAccountActions());
+        page_account.click_MyWishlists();
+        if (page_account.doesWishlistExist())
+            page_account.click_WishlistDelete();
 
         page_index.performSearch(search_criteria1);
         Assert.assertTrue(page_index.lookForSearchresult(search_results1));

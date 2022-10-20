@@ -34,7 +34,7 @@ public class Page_Account extends InitialClass {
     WebElement account_customer_account;
 
     @FindBy(xpath = "//tr[contains(@id,'wishlist')]//a[contains(text(),'My wishlist')]")
-    WebElement wishlist_open_details;
+    List<WebElement> wishlist_open_details;
 
     @FindBy(xpath = "//div[@class='wishlistLinkTop']//p[@class='product-name']")
     List<WebElement> wishlist_products;
@@ -50,8 +50,12 @@ public class Page_Account extends InitialClass {
         action.click(account_wishlists);
     }
 
+    public boolean doesWishlistExist() {
+        return action.isPresent(wishlist_open_details);
+    }
+
     public void click_OpenWishlistDetails() {
-        action.click(wishlist_open_details);
+        action.click(wishlist_open_details.get(0));
     }
 
     public void click_WishlistDelete() {
