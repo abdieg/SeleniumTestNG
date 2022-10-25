@@ -1,12 +1,13 @@
 app-url = http://automationpractice.com/index.php
 sign_in_user = pedro@testmail.com
 sign_in_pass = 12345
-browser = edge
+browser = firefox
 
 firefox_driver_location = /Users/diego/Coding/SeleniumServer/geckodriver
 edge_driver_location = /Users/diego/Coding/SeleniumServer/msedgedriver
 chrome_driver_location = /Users/diego/Coding/SeleniumServer/chromedriver
+safari_driver_location = /Users/diego/Coding/SeleniumServer/safaridriver
 
-window_width = 1680
-window_height = 1050
+window_width = 1280
+window_height = 720
 timeout = 30

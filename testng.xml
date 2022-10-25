@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suites">
-    <test verbose="2" name="Firefox tests">
+<suite name="All Test Suites" parallel="tests">
+    <test verbose="1" name="Firefox tests">
         <parameter name="browser" value="Firefox"/>
         <classes>
             <class name="TestScenarios"/>
         </classes>
     </test>
-    <test verbose="2" name="Edge tests">
+    <test verbose="1" name="Safari tests">
+        <parameter name="browser" value="Safari"/>
+        <classes>
+            <class name="TestScenarios"/>
+        </classes>
+    </test>
+    <test verbose="1" name="Edge tests">
         <parameter name="browser" value="Edge"/>
         <classes>
             <class name="TestScenarios"/>
         </classes>
     </test>
-    <test verbose="2" name="Chrome tests">
+    <test verbose="1" name="Chrome tests">
         <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="TestScenarios"/>

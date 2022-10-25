@@ -12,16 +12,16 @@ public class TestScenarios extends InitialClass {
     Page_Category page_category;
     Page_CartSummary page_cartsummary;
 
-//    @Parameters({ "browser" })
-//    @BeforeMethod
-//    public void setup(String browserName) { //Uncomment this method if TestNG needs to be used
-//        setDriver(browserName);
-//    }
-
+    @Parameters({ "browser" })
     @BeforeMethod
-    public void setup() { //Uncomment this method if single test needs to be executed
-        setDriver();
+    public void setup(String browserName) { //Uncomment this method if TestNG needs to be used
+        setDriver(browserName);
     }
+
+//    @BeforeMethod
+//    public void setup() { //Uncomment this method if single test needs to be executed
+//        setDriver();
+//    }
 
     @AfterMethod
     public void tearDown() {
