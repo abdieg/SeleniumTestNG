@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="Fix to wishlist test case and function to check element existence added">
+    <list default="true" id="6ab74bbb-e9ba-4ba5-932a-1e599c116d6b" name="Changes" comment="End of exam. Added GRID functionality in parallel with 4 different browsers">
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/initial/InitialClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestScenarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestScenarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666279155449</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="End of exam. Added GRID functionality in parallel with 4 different browsers">
+      <created>1666742142910</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1666742142910</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +300,8 @@
     <MESSAGE value="Adding Chrome support" />
     <MESSAGE value="Fix implemented for Firefox because of org.openqa.selenium.interactions.MoveTargetOutOfBoundsException" />
     <MESSAGE value="Fix to wishlist test case and function to check element existence added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix to wishlist test case and function to check element existence added" />
+    <MESSAGE value="End of exam. Added GRID functionality in parallel with 4 different browsers" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of exam. Added GRID functionality in parallel with 4 different browsers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
