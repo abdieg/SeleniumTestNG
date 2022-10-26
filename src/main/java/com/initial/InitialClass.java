@@ -85,7 +85,4 @@ public class InitialClass {
 
     }
 
-    public void sleep(int timeout) throws InterruptedException {
-        Thread.sleep(timeout);
-    }
 }
