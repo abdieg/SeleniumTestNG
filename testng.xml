@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suites" parallel="tests">
+<suite name="Run all tests">
     <test verbose="1" name="Firefox tests">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="TestScenarios"/>
+            <class name="TestScenarios">
+                <methods>
+                    <include name="test_verify_login_button"/>
+                    <include name="test_verify_log_in_and_out"/>
+                </methods>
+            </class>
         </classes>
     </test>
     <test verbose="1" name="Safari tests">
         <parameter name="browser" value="Safari"/>
         <classes>
-            <class name="TestScenarios"/>
+            <class name="TestScenarios">
+                <methods>
+                    <include name="test_verify_logo"/>
+                </methods>
+            </class>
         </classes>
     </test>
     <test verbose="1" name="Edge tests">
         <parameter name="browser" value="Edge"/>
         <classes>
-            <class name="TestScenarios"/>
+            <class name="TestScenarios">
+                <methods>
+                    <include name="test_verify_positive_search"/>
+                    <include name="test_verify_negative_search"/>
+                </methods>
+            </class>
         </classes>
     </test>
     <test verbose="1" name="Chrome tests">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="TestScenarios"/>
+            <class name="TestScenarios">
+                <methods>
+                    <include name="test_verify_customer_service"/>
+                    <include name="test_verify_cart_quantities_colors_sizes"/>
+                    <include name="test_verify_wishlist"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
