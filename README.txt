@@ -6,3 +6,5 @@ java -Dwebdriver.gecko.driver="/Users/diego/Coding/SeleniumServer/geckodriver" -
 
 3. Go to testng.xml location and run:
 mvn clean test -DsuiteXmlFile=testng.xml
+
+DEMO: https://youtu.be/PgBGJRU6XJM
